@@ -57,8 +57,7 @@ const Page: NextPage = () => {
 
   const authLine = async () => {
     await liff?.login({
-      redirectUri:
-        "https://fbb8-2405-9800-b642-80c-e5ab-1bd0-6bc7-1a3d.ngrok-free.app/profile",
+      redirectUri: process?.env?.NEXT_PUBLIC_LIFF_REDIRECT_URI,
     });
   };
 
