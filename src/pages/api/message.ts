@@ -72,13 +72,16 @@ export default async function handler(
                     Message
                     https://developers.line.biz/en/reference/messaging-api/#message-event
                 */
+        let textMessage = event?.message?.text?.toLowerCase();
         if (event?.message?.type === "text") {
-          if (event?.source?.type !== "group") {
+          if (
+            event?.source?.type !== "group" ||
+            textMessage === "my freelance jobs!" ||
+            textMessage === "your receipt. thank you"
+          ) {
             // Display a loading animation in one-on-one chats between users and LINE Official Accounts.
             await line?.isAnimationLoading(event?.source?.userId);
           }
-
-          let textMessage = event?.message?.text?.lowerCase();
 
           if (textMessage?.includes("line dev camp")) {
             await line?.replyWithStateless(event?.replyToken, [

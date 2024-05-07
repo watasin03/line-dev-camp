@@ -305,62 +305,28 @@ const Page: NextPage = () => {
     isClient && (
       <div className='w-full flex h-screen flex-col gap-4 justify-start p-4 items-center bg-gradient-to-br from-blue-600 via-pink-500 to-orange-500'>
         {isLoading ? (
-          <div className='flex flex-col justify-center items-center'>
+          <div className='flex flex-col justify-center items-center h-28 pt-52'>
             <div className='gap-8 flex justify-center items-center relative mb-14'>
-              <div className='relative'>
-                <div
-                  className='w-12 h-12 rounded-full animate-spin absolute transition duration-1000
-                            border-8 border-dashed border-blue-500 border-t-transparent'
-                ></div>
-              </div>
-              <div className='relative'>
-                <div
-                  className='w-12 h-12 rounded-full animate-spin absolute transition duration-0
-                            border-8 border-dashed border-violet-500 border-t-transparent'
-                ></div>
-              </div>
-              <div className='relative'>
-                <div
-                  className='w-12 h-12 rounded-full animate-spin absolute transition duration-500
-                            border-8 border-dashed border-pink-500 border-t-transparent'
-                ></div>
-              </div>
-              <div className='relative'>
-                <div
-                  className='w-12 h-12 rounded-full animate-spin absolute transition duration-1000
-                            border-8 border-dashed border-orange-500 border-t-transparent'
-                ></div>
-              </div>
-              <div className='relative'>
-                <div
-                  className='w-12 h-12 rounded-full animate-spin absolute transition duration-0
-                            border-8 border-dashed border-red-500 border-t-transparent'
-                ></div>
-              </div>
-              <div className='relative'>
-                <div
-                  className='w-12 h-12 rounded-full animate-spin absolute transition duration-500
-                            border-8 border-dashed border-violet-500 border-t-transparent'
-                ></div>
-              </div>
-              <div className='relative'>
-                <div
-                  className='w-12 h-12 rounded-full animate-spin absolute transition duration-1000
-                            border-8 border-dashed border-blue-500 border-t-transparent'
-                ></div>
-              </div>
-              <div className='relative'>
-                <div
-                  className='w-12 h-12 rounded-full animate-spin absolute transition duration-0
-                            border-8 border-dashed border-green-500 border-t-transparent'
-                ></div>
-              </div>
-              <div className='relative'>
-                <div
-                  className='w-12 h-12 rounded-full animate-spin absolute transition duration-500
-                            border-8 border-dashed border-yellow-500 border-t-transparent'
-                ></div>
-              </div>
+              <div
+                className='w-4 h-4 rounded-full animate-spin absolute transition duration-1000
+                            border-8 border-dashed border-green-600'
+              ></div>
+              <div
+                className='w-8 h-8 rounded-full animate-spin absolute transition duration-150
+                            border-8 border-dashed border-yellow-500 border-tl-transparent'
+              ></div>
+              <div
+                className='w-12 h-12 rounded-full animate-spin absolute transition duration-300
+                            border-8 border-dashed border-white border-tr-transparent'
+              ></div>
+              <div
+                className='w-16 h-16 rounded-full animate-spin absolute transition duration-500
+                            border-8 border-dashed border-blue-500 border-br-transparent'
+              ></div>
+              <div
+                className='w-20 h-20 rounded-full animate-spin absolute transition duration-500
+                            border-8 border-dashed border-red-500 border-bl-transparent'
+              ></div>
             </div>
             <div className='text-2xl font-black text-white animate-pulse duration-150'>
               Loading...
