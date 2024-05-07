@@ -78,9 +78,9 @@ export default async function handler(
             await line?.isAnimationLoading(event?.source?.userId);
           }
 
-          let textMessage = event?.message?.text;
+          let textMessage = event?.message?.text?.lowerCase();
 
-          if (textMessage === "LINE Dev Camp") {
+          if (textMessage?.includes("line dev camp")) {
             await line?.replyWithStateless(event?.replyToken, [
               {
                 type: "text",
@@ -109,6 +109,11 @@ export default async function handler(
                 ],
               },
             ]);
+          } else if (
+            textMessage === "my freelance jobs!" ||
+            textMessage === "your receipt. thank you"
+          ) {
+            continue;
           } else {
             /* Foward to Dialogflow */
             await dialogflow?.forwardDialodflow(request);
